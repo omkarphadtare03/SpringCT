@@ -1,0 +1,105 @@
+<!-- 1. Create a page with header, footer, body and left side navigation with 2 links - Add and View. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpringCT</title>
+    <style>
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+        }
+        
+        .footer1 {
+            height: 50px;
+            bottom: 0;
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            display: flex;
+            color: antiquewhite;
+        }
+        
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        @media screen and (max-width: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <header>
+
+        <h1>
+            Hello world!!
+        </h1>
+        <h2>
+            Hello everyone!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, distinctio? Temporibus, porro. Maxime, a. Similique provident tenetur rerum repellat temporibus minus blanditiis ex, unde, magni voluptatum alias sequi assumenda? Quasi
+            ab ipsam neque fugit! Saepe sed hic vel quam, laboriosam asperiores placeat laudantium, veniam blanditiis cum quos aut magnam nemo incidunt, quas neque enim nam. Modi eum aperiam, velit alias consequatur et aspernatur officiis cumque fugit
+            quaerat repellendus, dolore nostrum? Illum asperiores obcaecati maxime sunt ut aliquam sapiente incidunt officiis, accusamus modi eveniet enim odit, mollitia provident minus expedita quo! Alias odit atque modi cumque nam quos suscipit consequatur?
+
+        </h2>
+    </header>
+    <div id="mysidenav" class="sidenav ">
+
+        <a href="javascript:void(0)" class="closebtn() " onclick="closeNav() ">&times;</a>
+        <a href="Add.html"> Add</a>
+        <a href="View.html">View</a>
+    </div>
+    <span style="font-size: 30px;cursor:pointer" onclick="openNav()">&#9776;
+   </span>
+    <script>
+        function openNav() {
+            document.getElementById("mysidenav").style.width = "250px";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mysidenav").style.width = "0";
+
+        }
+    </script>
+    <div class="footer1 ">
+        <footer>
+            <p>
+                Copyright @springct All rights are reserved
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
